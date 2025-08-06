@@ -7,9 +7,9 @@ export class TaskControllers {
 
         const search = req.query.search;
 
-        const responce = taskService.getMany(search as string);
+        const response = taskService.getMany(search as string);
 
-        return res.status(200).json(responce);
+        return res.status(200).json(response);
     }
 
     getOne(req: Request, res: Response) {
@@ -23,18 +23,18 @@ export class TaskControllers {
     create(req: Request, res: Response) {
         const taskService = new TaskService();
 
-        const responce = taskService.create(req.body);
+        const response = taskService.create(req.body);
 
-        return res.status(201).json(responce);
+        return res.status(201).json(response);
     }
 
     update(req: Request, res: Response) {
         const taskService = new TaskService();
 
         // Usando locals aqui 
-        const responce = taskService.upadte(res.locals.task, req.body);
+        const response = taskService.update(res.locals.task, req.body);
 
-        return res.status(200).json(responce);
+        return res.status(200).json(response);
     }
 
     delete(req: Request, res: Response) {

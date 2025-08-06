@@ -43,16 +43,16 @@ export class TaskService {
 
     // Atualizar uma task
     // esta usando o locals do res e trazendo o valor armazenado feito na consulta do BD
-    upadte(currentTask: TTask, body: TTaskUpdateBody): TTask {
+    update(currentTask: TTask, body: TTaskUpdateBody): TTask {
         const now = new Date();
         // Pegar tudo que tem na task antiga e vai substitui todo que vier no body 
-        const uptadTask = { ...currentTask, ...body, upadteAt: now }
+        const updatedTask = { ...currentTask, ...body, updatedAt: now }
 
         const index = taskDatabase.findIndex((task) => task.id === currentTask.id);
 
-        taskDatabase.splice(index, 1, uptadTask);
+        taskDatabase.splice(index, 1, updatedTask);
 
-        return uptadTask;
+        return updatedTask;
     }
 
     // Excluir uma task
