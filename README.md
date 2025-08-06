@@ -289,7 +289,7 @@ Este projeto está sob a licença ISC. Veja o arquivo `LICENSE` para mais detalh
 ## 👨‍💻 Autor
 
 **Seu Nome**
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
+- GitHub: joaofilhox
 
 ---
 
